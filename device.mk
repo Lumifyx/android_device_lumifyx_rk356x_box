@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product-if-exists, vendor/rockchip/common/npu/npu.mk)
 
-BOARD_SEPOLICY_DIRS += device/rockchip/rk356x_box/sepolicy_vendor
+BOARD_SEPOLICY_DIRS += device/lumifyx/rk356x_box/sepolicy_vendor
 
 # enable this for support f2fs with data partion
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
@@ -72,7 +72,7 @@ TARGET_BOARD_CONCISE_RESOLUTION := false
 # remove some resolution which are not commonly used
 ifeq ($(TARGET_BOARD_CONCISE_RESOLUTION),true)
 PRODUCT_COPY_FILES += \
-    device/rockchip/rk356x_box/etc/resolution_white.xml:/system/usr/share/resolution_white.xml
+    device/lumifyx/rk356x_box/etc/resolution_white.xml:/system/usr/share/resolution_white.xml
 endif
 
 #add for camera aiq2.0
