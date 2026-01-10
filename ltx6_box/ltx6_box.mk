@@ -78,6 +78,9 @@ PRODUCT_PACKAGES += \
     RockchipPinnerService
 
 PRODUCT_PACKAGES += \
+    FD655_demo
+
+PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     android.hardware.memtrack@1.0-impl \
     memtrack.$(TARGET_BOARD_PLATFORM)

@@ -17,7 +17,12 @@ on boot
 
     # reduce schedul time to improve io performance
     write /sys/kernel/debug/sched_features NO_ENERGY_AWARE
-
+    chmod 0777 /sys/class/leds/work-led/brightness
+    chmod 0777 /sys/class/leds/work-led/trigger
+    chmod 0777 /sys/power/wake_lock
+    write /sys/power/wake_lock noSuspend
+    write /sys/class/leds/work-led/trigger none
+    write /sys/class/leds/work-led/brightness 255
     chown system system /sys/devices/platform/fe8a0000.usb2-phy/otg_mode
     chmod 0660 /sys/devices/platform/fe8a0000.usb2-phy/otg_mode
 
@@ -34,3 +39,13 @@ on init
 
 on property:cts_gts.status=true
     setprop vendor.hwc.compose_policy 2
+
+on property:sys.boot_completed=1
+    start FD655_Demo
+
+service FD655_Demo /system/bin/FD655_demo
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:init:s0
