@@ -39,7 +39,7 @@ PRODUCT_NAME := ltx6_box
 PRODUCT_DEVICE := ltx6_box
 PRODUCT_BRAND := rockchip
 PRODUCT_MODEL := ltx6_box
-PRODUCT_MANUFACTURER := lumifyx
+PRODUCT_MANUFACTURER := tv
 PRODUCT_AAPT_PREF_CONFIG := tvdpi
 #
 ## add Rockchip properties
