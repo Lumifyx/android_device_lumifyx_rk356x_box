@@ -7,8 +7,8 @@
 # Default ecclist
 ro.ril.ecclist=112,911
 wifi.interface=wlan0
-rild.libpath=/system/lib/libril-rk29-dataonly.so
-rild.libargs=-d /dev/ttyACM0
+rild.libpath=/vendor/lib64/libreference-ril-quectel.so
+rild.libargs=-d /dev/ttyUSB2
 persist.tegra.nvmmlite = 1
 persist.sys.boot.check=false
 ro.audio.monitorOrientation=true

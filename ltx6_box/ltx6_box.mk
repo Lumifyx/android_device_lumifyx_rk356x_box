@@ -69,6 +69,10 @@ BOARD_WITH_SPECIAL_PARTITIONS := baseparameter:1M,logo:16M
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/spn-conf.xml:system/etc/spn-conf.xml
 
+ifeq ($(strip $(BOARD_HAS_RK_4G_MODEM)),true)
+    DEVICE_MANIFEST_FILE += device/rockchip/common/4g_modem/manifest.xml
+endif
+
 PRODUCT_PACKAGES += \
     RKTvLauncher \
     libcrypto_vendor.vendor \
